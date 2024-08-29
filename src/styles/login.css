@@ -1,0 +1,175 @@
+:root {
+    --color-background: #f3f4f6;
+    --color-text: #111827;
+    --color-text-secondary: #4b5563;
+    --color-input-border: #d1d5db;
+    --color-button-primary: #2563eb;
+    --color-button-primary-hover: #1d4ed8;
+    --color-button-secondary: #ffffff;
+    --color-button-secondary-hover: #f3f4f6;
+    --color-link: #2563eb;
+    --color-error: #dc2626;
+    --color-button-disabled: #93c5fd;
+    /* font families */
+    --montserrat-font: "Montserrat", sans-serif;
+    --krona-font: "Krona One", sans-serif;
+    
+  }
+  
+#root{
+    font-family: var(--montserrat-font);
+}
+
+  .login-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--color-background);
+  }
+  
+  .background-image {
+    display: none;
+  }
+  
+  .login-form-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+  }
+  
+  h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: var(--color-text);
+  }
+  
+  .input-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-input-border);
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+  }
+  
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+  }
+  
+  .remember-me input {
+    margin-right: 0.5rem;
+  }
+  
+  .forgot-password {
+    color: var(--color-link);
+    font-size: 0.875rem;
+    text-decoration: none;
+  }
+  
+  .sign-in-button,
+  .google-sign-in {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .sign-in-button {
+    background-color: var(--color-button-primary);
+    color: var(--color-button-secondary);
+    margin-bottom: 1rem;
+  }
+  
+  .sign-in-button:hover {
+    background-color: var(--color-button-primary-hover);
+  }
+  
+  .sign-in-button:disabled {
+    background-color: var(--color-button-disabled);
+    cursor: not-allowed;
+  }
+  
+  .google-sign-in {
+    background-color: var(--color-button-secondary);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-input-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .google-sign-in:hover {
+    background-color: var(--color-button-secondary-hover);
+  }
+  
+  .google-icon {
+    margin-right: 0.5rem;
+  }
+  
+  .sign-up-prompt {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-top: 1rem;
+  }
+  
+  .sign-up-prompt a {
+    color: var(--color-link);
+    text-decoration: none;
+  }
+  
+  .error-message {
+    color: var(--color-error);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  @media (min-width: 1024px) {
+    .background-image {
+      display: block;
+      width: 50%;
+      background-image: url('../assets/sign-in-form-desktop.svg?height=900&width=800');
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .login-form-container {
+      width: 50%;
+    }
+  }
