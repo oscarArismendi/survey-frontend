@@ -15,12 +15,12 @@ export const Login = ({ onLoginSuccess }) => {
     setLoading(true)
 
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch('http://127.0.0.1:8080/users/log-in', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username: email, password }),
       })
 
       const data = await response.json()
@@ -28,6 +28,8 @@ export const Login = ({ onLoginSuccess }) => {
       if (response.ok) {
         // Handle successful login
         console.log('Login successful', data)
+        localStorage.setItem('authToken', data.jwt);
+        console.log('Token stored:', localStorage.getItem('authToken'));
         onLoginSuccess() // Call the onLoginSuccess function passed from App.jsx
       } else {
         setError(data.message || 'Login failed. Please try again.')

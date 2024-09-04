@@ -1,10 +1,18 @@
-import { useState } from 'react'
+import { useState, useEffect  } from 'react'
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
 import {Login} from './pages/Login'
 import {Home} from './pages/Home'
 import "./index.css"
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
+
+  useEffect(() => {
+    // Check if the authToken exists in localStorage
+    const token = localStorage.getItem('authToken')
+    if (token) {
+      setIsAuthenticated(true)
+    }
+  }, [])
 
   const handleLoginSuccess = () => {
     setIsAuthenticated(true)
