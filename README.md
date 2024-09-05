@@ -21,6 +21,7 @@
    npm install
    npm install react-icons
    npm install react-router-dom
+   npm install lucide-react
   ```
 
 ## Running the application

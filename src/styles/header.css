@@ -1,0 +1,52 @@
+.hamburger {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.hamburger i{
+    color: white;
+    width: 20px;
+    font-size:1rem;
+}
+
+.header {
+    padding: 2% 0% 0% 3%;
+    background-color: var(--primary-color);
+}
+
+.header-menu {
+    display: flex;
+    gap: 80px;
+    justify-content: space-evenly;
+}
+
+
+@media (max-width: 1200px) {
+    .header {
+        padding: 5%;
+    }
+
+    .header-menu {
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 500px){
+    .header-menu {
+        display: none; /* Hide header menu */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger button */
+    }
+
+    .header-menu.active {
+        display: flex; /* Show when active */
+        flex-direction: column;
+        align-items: center;
+    }
+}

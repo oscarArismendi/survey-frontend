@@ -1,0 +1,15 @@
+.nl-menu-link {
+    font-family: var(--montserrat-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--tertiary-color);
+    text-decoration: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.nl-menu-icon {
+    height: 1rem; 
+    width: 1rem;  
+  }

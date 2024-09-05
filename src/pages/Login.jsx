@@ -27,9 +27,8 @@ export const Login = ({ onLoginSuccess }) => {
 
       if (response.ok) {
         // Handle successful login
-        console.log('Login successful', data)
         localStorage.setItem('authToken', data.jwt);
-        console.log('Token stored:', localStorage.getItem('authToken'));
+        // console.log('Token stored:', localStorage.getItem('authToken'));
         onLoginSuccess() // Call the onLoginSuccess function passed from App.jsx
       } else {
         setError(data.message || 'Login failed. Please try again.')
