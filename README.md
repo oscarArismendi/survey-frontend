@@ -22,7 +22,15 @@
    npm install react-icons
    npm install react-router-dom
    npm install lucide-react
+   npm install -g npm@latest
+   npm install -g shadcn-ui
+   npx shadcn add dialog card input accordion alert-dialog
+   npx shadcn add label
+
+   
   ```
+
+  for information about shadecn see this link: https://ui.shadcn.com/docs/installation/vite
 
 ## Running the application
 1. To start the development server and view the application in your browser, use:
