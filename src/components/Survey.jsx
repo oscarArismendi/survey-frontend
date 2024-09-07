@@ -10,46 +10,8 @@ import { Plus, Edit, Trash } from 'lucide-react'
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog"
 import '../styles/survey.css'
 
-export const Survey = () => {
-  const [survey, setSurvey] = useState({
-    title: "Customer Satisfaction Survey",
-    categories: ["Satisfaction", "Recommendation"],
-    chapters: [
-      {
-        title: "Product Satisfaction",
-        questions: [
-          {
-            text: "How satisfied are you with our product?",
-            options: ["Very Satisfied", "Satisfied", "Neutral", "Dissatisfied", "Very Dissatisfied"],
-            subQuestions: [
-              {
-                text: "What features do you like most?",
-                options: ["User Interface", "Performance", "Reliability", "Customer Support"]
-              }
-            ],
-            categories: ["Satisfaction"]
-          }
-        ]
-      },
-      {
-        title: "Service Satisfaction",
-        questions: [
-          {
-            text: "How would you rate our customer service?",
-            options: ["Excellent", "Good", "Average", "Poor", "Very Poor"],
-            subQuestions: [],
-            categories: ["Satisfaction"]
-          },
-          {
-            text: "Would you recommend our service to others?",
-            options: ["Definitely", "Probably", "Not sure", "Probably not", "Definitely not"],
-            subQuestions: [],
-            categories: ["Recommendation"]
-          }
-        ]
-      }
-    ]
-  })
+export const Survey = ({surveyJson}) => {
+  const [survey, setSurvey] = useState(surveyJson)
 
   const [isEditing, setIsEditing] = useState(false)
   const [editingItem, setEditingItem] = useState(null)
